@@ -12,6 +12,10 @@
 		DB5174731CBD6ABC0046D65E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5174711CBD6ABC0046D65E /* Main.storyboard */; };
 		DB5174751CBD6ABC0046D65E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB5174741CBD6ABC0046D65E /* Assets.xcassets */; };
 		DB5174781CBD6ABC0046D65E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB5174761CBD6ABC0046D65E /* LaunchScreen.storyboard */; };
+		DB5176241CBD71BD0046D65E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5176201CBD71BD0046D65E /* Bolts.framework */; };
+		DB5176251CBD71BD0046D65E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5176211CBD71BD0046D65E /* FBSDKCoreKit.framework */; };
+		DB5176261CBD71BD0046D65E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5176221CBD71BD0046D65E /* FBSDKLoginKit.framework */; };
+		DB5176271CBD71BD0046D65E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5176231CBD71BD0046D65E /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		DB5174741CBD6ABC0046D65E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB5174771CBD6ABC0046D65E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB5174791CBD6ABC0046D65E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB5176201CBD71BD0046D65E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		DB5176211CBD71BD0046D65E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DB5176221CBD71BD0046D65E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DB5176231CBD71BD0046D65E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5176271CBD71BD0046D65E /* FBSDKShareKit.framework in Frameworks */,
+				DB5176241CBD71BD0046D65E /* Bolts.framework in Frameworks */,
+				DB5176251CBD71BD0046D65E /* FBSDKCoreKit.framework in Frameworks */,
+				DB5176261CBD71BD0046D65E /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +50,7 @@
 		DB5174611CBD6ABB0046D65E = {
 			isa = PBXGroup;
 			children = (
+				DB5176281CBD71C20046D65E /* Frameworks */,
 				DB51746C1CBD6ABC0046D65E /* Pear */,
 				DB51746B1CBD6ABC0046D65E /* Products */,
 			);
@@ -62,6 +75,17 @@
 				DB5174791CBD6ABC0046D65E /* Info.plist */,
 			);
 			path = Pear;
+			sourceTree = "<group>";
+		};
+		DB5176281CBD71C20046D65E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB5176201CBD71BD0046D65E /* Bolts.framework */,
+				DB5176211CBD71BD0046D65E /* FBSDKCoreKit.framework */,
+				DB5176221CBD71BD0046D65E /* FBSDKLoginKit.framework */,
+				DB5176231CBD71BD0046D65E /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,9 +273,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Pear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Pear;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devmountain.pear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -260,9 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Pear/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.Pear;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devmountain.pear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
